@@ -1,0 +1,20 @@
+{
+  "server": {
+    "host": "0.0.0.0",
+    "port": 8080,
+    "llama_binary": "/home/pi/llama.cpp/build/bin/llama-cli",
+    "idle_unload_seconds": 5,
+    "request_timeout_seconds": 180,
+    "session_db": "sessions.sqlite3",
+    "benchmark_log": "benchmarks.jsonl"
+  },
+  "models": {
+    "general": {
+      "name": "Qwen 1.5B local model",
+      "path": "/home/pi/llama.cpp/models/qwen1_5b.gguf",
+      "role": "known-good local model from the Pi llama.cpp models folder",
+      "llama_args": ["-c", "64", "--threads", "3", "--batch-size", "32"],
+      "defaults": {"temperature": 0.4, "top_p": 0.8, "max_tokens": 128}
+    }
+  }
+}

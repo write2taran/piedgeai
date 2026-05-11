@@ -1,0 +1,15 @@
+[project]
+name = "piedgeai"
+version = "0.1.0"
+description = "Lightweight Raspberry Pi edge AI runtime scheduler for single-model local LLM orchestration."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "piedgeai maintainers" }]
+
+[project.scripts]
+piedgeai = "piedgeai.server:main"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
